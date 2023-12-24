@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alumnos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@1,300&family=Montserrat+Alternates:ital,wght@1,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Lato:ital,wght@1,300&family=Montserrat+Alternates:ital,wght@1,600&display=swap" rel="stylesheet">
+
+    {% load static %}
+    <style>
+        body{
+            background-image: url('{% static "paisaje.jpg" %}' );
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Montserrat Alternates', sans-serif;
+            padding-top: 60px;
+
+
+        }
+
+        .container{
+            max-width:550px;
+            margin: auto;
+            background-color: #e1dfde;
+            border: 1px solid #2e2e2e;
+            -webkit-box-shadow: 0 0 40px 5px rgba(255,255,255,.15);
+            -moz-box-shadow: 0 0 40px 5px rgba(255,255,255,.15);
+            box-shadow: 0 0 40px 5px rgba(255,255,255,.15);
+        }
+
+        a,p{
+
+            color:#997d6e;
+        }
+
+        H1,h2,h3,h4,h5,h6 {
+            font-family: 'Lato', sans-serif;
+
+        }
+        .barra-superior{
+            display:flex;
+            justify-content: space-between;
+            color:#FFFFFF;
+            border-radius:5px 5px 0 0;
+            background:#4b3618;
+            padding: 10px;
+        }
+        .barra-superior a {
+            color:rgb(225, 225, 225);
+            text-decoration: none;
+            font-size: 42px;
+        }
+        .envoltorio-alumno{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color:#ffffff;
+        border-top: 1px solid rgb(225, 225, 225);
+        }
+        .titulo-alumno{
+        display:flex;
+
+        }
+        .titulo-alumno a {
+        text-decoration: none;
+        color: #4b5156;
+        margin-left: 10px;
+
+        }
+        .icono-alumno-completa{
+        height: 20px;
+        width: 20px;
+        background:#28283c;
+        border-radius: 50px;
+
+        }
+        .icono-alumno-incompleta{
+        height: 20px;
+        width: 20px;
+        background-color: rgb(218, 218, 218);
+        border-radius: 50px;
+        }
+        .enlace-eliminar{
+        text-decoration: none;
+        font-weight: 900;
+        color: #464140;
+        font-size:22px;
+        line-height: 0;
+        }
+        #envoltorio-agregar-buscar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: #d9b28e;
+        }
+        #enlace-agregar{
+        color: #464140;
+        text-decoration:none;
+        font-size: 42px;
+        text-shadow: 1px 1px #81413b;
+
+        }
+        input[type=text],
+        input[type=password],
+        textarea{
+        border: 1px solid #b4a08c;
+        border-radius: 5px;
+        padding: 10px;
+        width: 90%;
+        }
+        label{
+        padding-top: 10px !important;
+        display: block;
+        }
+        .boton{
+        border: 1px solid #eeb796;
+        background-color: #8c8c8c;
+        color:#000000;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        }
+        .cuerpo-formulario{
+        padding: 20px;
+
+        }
+        .pie-logo{
+        display:flex;padding:10px;justify-content: space-between;
+        background: #d9b28e;
+        }
+        .pie-logo img{
+        width:70px;position:relative;top: 2px;
+        border-radius: 50%
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+</body>
+</html>

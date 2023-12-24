@@ -1,0 +1,18 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="barra-superior">
+    <a href="{% url 'alumnos' %}">&#x1F860; Volver</a>
+</div>
+<div class="cuerpo-formulario">
+    <form method="post" action="">
+    {% csrf_token %}
+    <p>Vas a eliminar este alumno "{{alumno}}"</p>
+    <input class="boton" type="submit" value="Eliminar">
+    </form>
+</div>
+
+
+
+
+{% endblock content %}
